@@ -337,6 +337,12 @@ router.get('/tiktod/stalk', async (req, res, next) => {
              })
          })
 })
+router.get('/cekapikey', async (req, res, next) => {
+        var apikeyInput = req.query.apikey
+            
+	if(!apikeyInput) return res.json(loghandler.notparam)
+	if(apikeyInput != 'rizkyfa9') return res.json(loghandler.invalidKey)
+})
 
 router.get('/randomquote', async (req, res, next) => {
         var apikeyInput = req.query.apikey
