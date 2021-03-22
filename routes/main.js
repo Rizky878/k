@@ -3,11 +3,11 @@ __path = process.cwd()
 var express = require('express');
 var router = express.Router();
 
-router.get('/', (req, res) => {
+router.get('/dosc', (req, res) => {
     res.sendFile(__path + '/views/index.html')
 })
 
-router.get('/about', (req, res) => {
+router.get('/', (req, res) => {
     res.sendFile(__path + '/views/about.html')
 })
 
