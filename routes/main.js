@@ -16,9 +16,9 @@ router.get('/config', (req, res) => {
         status: true,
         result: {
             prefix : '/',
-            namabot: 'RahmadBot',
-            namaowner: 'Rahmad Pasker',
-            instagram: 'rahmad.80',
+            namabot: 'Kurumi Chan',
+            namaowner: 'Rizky Fadilah',
+            instagram: '_rizkyfadilah8',
             youtube : 'Gada'
         }
     }
