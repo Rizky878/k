@@ -3,12 +3,15 @@ __path = process.cwd()
 var express = require('express');
 var router = express.Router();
 
-router.get('/dosc', (req, res) => {
+router.get('/docs', (req, res) => {
     res.sendFile(__path + '/views/index.html')
 })
 
-router.get('/', (req, res) => {
+router.get('/rizky', (req, res) => {
     res.sendFile(__path + '/views/about.html')
+})
+router.get('/', (req, res) => {
+    res.sendFile(__path + '/views/apis.html')
 })
 
 router.get('/config', (req, res) => {
@@ -16,9 +19,9 @@ router.get('/config', (req, res) => {
         status: true,
         result: {
             prefix : '/',
-            namabot: 'Kurumi Chan',
-            namaowner: 'Rizky Fadilah',
-            instagram: '_rizkyfadilah8',
+            namabot: 'Rizky',
+            namaowner: 'Rizky',
+            instagram: 'ks',
             youtube : 'Gada'
         }
     }
