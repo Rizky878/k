@@ -303,6 +303,21 @@ router.get('/fakta', async (req, res, next) => {
          result: randomnix
          })
 })
+router.get('/amv', async (req, res, next) => {
+        var apikeyInput = req.query.apikey
+	if(!apikeyInput) return res.json(loghandler.notparam)
+	if(apikeyInput != 'RizkyApi') return res.json(loghandler.invalidKey)
+          bdyyyy = await fetch('https://raw.githubusercontent.com/Rizky878/k/main/amv.txt?token=ARVTXCNT7SXQMOPDBVFSMPDALL2BE')
+       bdy = await bdyyyy.text()
+        splitnix = bdy.split('\n')
+              
+         randomnix = splitnix[Math.floor(Math.random() * splitnix.length)]
+         res.json({
+         status: true, 
+         creator: creator,
+         result: randomnix
+         })
+})
 router.get('/cita', async (req, res, next) => {
         var apikeyInput = req.query.apikey
 	if(!apikeyInput) return res.json(loghandler.notparam)
