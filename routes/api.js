@@ -307,7 +307,7 @@ router.get('/amv', async (req, res, next) => {
         var apikeyInput = req.query.apikey
 	if(!apikeyInput) return res.json(loghandler.notparam)
 	if(apikeyInput != 'RizkyApi') return res.json(loghandler.invalidKey)
-          bdyyyy = await fetch('https://raw.githubusercontent.com/Rizky878/k/main/amv.txt?token=ARVTXCNT7SXQMOPDBVFSMPDALL2BE')
+          bdyyyy = await fetch('https://raw.githubusercontent.com/Rizky878/nuruto/BARBot/Iki.txt')
        bdy = await bdyyyy.text()
         splitnix = bdy.split('\n')
               
